@@ -1,94 +1,57 @@
 # Quantum States, Teleportation, and Error Correction
 
-A Qiskit-based quantum computing project demonstrating Bell states, quantum teleportation, and phase-flip error correction using quantum circuit simulation and statevector analysis.
+A Qiskit-based quantum computing project exploring fundamental concepts in quantum information through quantum circuit simulation and statevector analysis.
 
 ## Overview
 
-This project explores fundamental concepts in quantum information using **Qiskit**.
+This project demonstrates:
 
-The notebook includes:
-
-- Preparation and analysis of the four Bell states
-- Quantum statevector representation
-- Quantum teleportation protocol
+- Preparation and verification of the four Bell states
+- Quantum statevector analysis
+- Quantum teleportation
 - Bloch sphere visualization
 - Three-qubit phase-flip error correction
 - Syndrome extraction and conditional correction
-- Numerical verification of recovered quantum states
+- Numerical verification of state recovery
 
 ## Contents
 
-### 1. Bell States
+### Bell States
 
-The four maximally entangled Bell states are constructed and verified:
+Construction and statevector verification of the four Bell states:
 
-\[
-|\Phi^+\rangle =
-\frac{1}{\sqrt{2}}(|00\rangle+|11\rangle)
-\]
+- $|\Phi^+\rangle$
+- $|\Phi^-\rangle$
+- $|\Psi^+\rangle$
+- $|\Psi^-\rangle$
 
-\[
-|\Phi^-\rangle =
-\frac{1}{\sqrt{2}}(|00\rangle-|11\rangle)
-\]
+### Quantum Teleportation
 
-\[
-|\Psi^+\rangle =
-\frac{1}{\sqrt{2}}(|01\rangle+|10\rangle)
-\]
+Implementation of the quantum teleportation protocol for the $|+\rangle$ state.
 
-\[
-|\Psi^-\rangle =
-\frac{1}{\sqrt{2}}(|01\rangle-|10\rangle)
-\]
-
-The generated states are analyzed using Qiskit's `Statevector` representation.
-
----
-
-## 2. Quantum Teleportation
-
-The notebook implements the standard quantum teleportation protocol.
-
-An input state:
-
-\[
-|+\rangle =
-\frac{1}{\sqrt{2}}(|0\rangle+|1\rangle)
-\]
-
-is transferred from Alice's qubit to Bob's qubit using:
+The circuit uses:
 
 - A shared Bell pair
-- Alice's Bell-basis measurement
+- Alice's measurements
 - Classical measurement results
-- Bob's conditional quantum corrections
+- Bob's conditional corrections
 
-The final state is verified using:
+The resulting state is verified using the statevector and Bloch sphere.
 
-- Statevector analysis
-- Bloch sphere visualization
+### Phase-Flip Error Correction
 
----
+Implementation of a three-qubit error-correction scheme for a single phase-flip ($Z$) error.
 
-## 3. Phase-Flip Error Correction
+The circuit includes:
 
-A three-qubit quantum error correction scheme is implemented to correct a single phase-flip error.
-
-The workflow includes:
-
-1. Preparation of an arbitrary input quantum state
-2. Encoding into three physical qubits
-3. Introduction of a single Pauli-Z error
-4. Syndrome extraction using ancilla qubits
-5. Identification of the corrupted qubit
-6. Conditional quantum correction
-7. Decoding of the logical qubit
-8. Comparison between initial and recovered states
-
-The final recovery is evaluated using statevector overlap.
-
----
+1. Arbitrary input-state preparation
+2. Logical-state encoding
+3. Single-qubit phase-flip error
+4. Syndrome extraction
+5. Conditional error correction
+6. Ancilla reset
+7. Logical-state decoding
+8. State recovery verification
 
 ## Technologies
 
@@ -99,11 +62,10 @@ The final recovery is evaluated using statevector overlap.
 - Matplotlib
 - Jupyter Notebook
 
----
+## Repository Structure
 
-## Installation
-
-Clone this repository:
-
-```bash
-git clone https://github.com/YOUR_USERNAME/quantum-states-teleportation-error-correction.git
+```text
+quantum-states-teleportation-error-correction/
+│
+├── README.md
+└── quantum_states_teleportation_error_correction.ipynb
