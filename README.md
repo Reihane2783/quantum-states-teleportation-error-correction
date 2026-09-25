@@ -62,5 +62,10 @@ The circuit includes:
 - Matplotlib
 - Jupyter Notebook
 
-├── READM.md
+## Repository Structure
+
+```text
+quantum-states-teleportation-error-correction/
+│
+├── README.md
 └── quantum_states_teleportation_error_correction.ipynb
